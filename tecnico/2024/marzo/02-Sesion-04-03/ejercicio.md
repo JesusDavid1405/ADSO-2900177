@@ -51,34 +51,70 @@ FIN
 ```
 ### Python
 ```
-  personaUno= ""
-  personaDos= ""
-  personaTres= ""
-  personaUnoIn= 0.0
-  personaDosIn= 0.0
-  personaTresIn= 0.0
-  personaUnoPor= 0.0
-  personaDosPor= 0.0
-  personaTresPor= 0.0
-  totalIn= 0.0
-  
-  personaUno= input( "dijite el nombre de la primera Persona: ")
-  personaDos= input( "dijite el nombre de la segunda Persona: ")
-  personaTres= input( "dijite el nombre de la tercera Persona: ")
-  personaUnoIn=float(input("dijite la inversion de "+personaUno+": "))
-  personaDosIn=float(input("dijite la inversion de "+personaDos+": "))
-  personaTresIn=float(input("dijite la inversion de "+personaTres+": "))
-  
-  totalIn= personaUnoIn + personaDosIn + personaTresIn
-  
-  personaUnoPor= (personaUnoIn / totalIn) * 100
-  personaDosPor= (personaDosIn / totalIn) * 100
-  personaTresPor= (personaTresIn / totalIn) * 100
-  
-  print("el porcentaje de la inversion ",personaUno," es",personaUnoPor )
-  print("el porcentaje de la inversion ",personaDos," es",personaDosPor )
-  print("el porcentaje de la inversion ",personaTres," es",personaTresPor )
+	personaUno= ""
+	personaDos= ""
+	personaTres= ""
+	personaUnoIn= 0.0
+	personaDosIn= 0.0
+	personaTresIn= 0.0
+	personaUnoPor= 0.0
+	personaDosPor= 0.0
+	personaTresPor= 0.0
+	totalIn= 0.0
+	  
+	personaUno= input( "dijite el nombre de la primera Persona: ")
+	personaDos= input( "dijite el nombre de la segunda Persona: ")
+	personaTres= input( "dijite el nombre de la tercera Persona: ")
+	personaUnoIn=float(input("dijite la inversion de "+personaUno+": "))
+	personaDosIn=float(input("dijite la inversion de "+personaDos+": "))
+	personaTresIn=float(input("dijite la inversion de "+personaTres+": "))
+	  
+	totalIn= personaUnoIn + personaDosIn + personaTresIn
+	  
+	personaUnoPor= (personaUnoIn / totalIn) * 100
+	personaDosPor= (personaDosIn / totalIn) * 100
+	personaTresPor= (personaTresIn / totalIn) * 100
+	  
+	print("el porcentaje de la inversion ",personaUno," es",personaUnoPor )
+	print("el porcentaje de la inversion ",personaDos," es",personaDosPor )
+	print("el porcentaje de la inversion ",personaTres," es",personaTresPor )
 
+```
+### Condicional
+```
+	msgError = "Error, inversión no válida."
+	msgOk = "Inversión correcta, ok."
+	msgInput = "Favor, indique la inversión de la persona "
+	msgOutput = "Porcentaje de inversión de la persona  "
+	# Cuando se ingresa un dato de tipo String, para un datos que recibe un flaot, se debe usar el try-except
+	
+	p1 = float(input(msgInput + "1: "))
+	if p1 > 0:
+	    print(msgOk)
+	    p2 = float(input(msgInput + "2: "))
+	    if p2 > 0:        
+	        print(msgOk)
+	        p3 = float(input(msgInput + "3: "))
+	        if p3 > 0:
+	            print(msgOk)
+	            # Cuando el programa llega a este punto, es porque todas las inversiones son válidas.
+	            it = p1 + p2 + p3
+	
+	            pp1 = (p1/it)*100
+	            pp2 = (p2/it)*100
+	            pp3 = (p3/it)*100
+	
+	            #Salida 
+	            print(msgOutput + "1: " + str(pp1)+"%")
+	            print(msgOutput + "2: " + str(pp2)+"%")
+	            print(msgOutput + "3: " + str(pp3)+"%")
+	        else: 
+	            print(msgError)
+	    else: 
+	        print(msgError)
+	
+	else: 
+	    print(msgError)
 ```
 2. Un alumno desea saber cuál será su promedio general en las tres materias más difíciles que cursa y cuál será el promedio que obtendrá en cada una de ellas. Estas materias se evalúan como se muestra a continuación:
 
@@ -233,6 +269,98 @@ FIN
 	print("El Promedio de nota de fisica es: "+str(fisicaPro))
 	print("El Promedio de nota de quimica es: "+str(quimicaPro))
 
+```
+### Condicional
+```	
+	matematicasPorTareas= 0.1
+	fisicaPorTareas= 0.2
+	quimicaPorTareas= 0.15
+	
+	quimicaExamenNota= 0.0
+	matematicasPorExamen= 0.9
+	fisicaPorExamen= 0.8
+	quimicaPorExamen= 0.85
+	
+	msgError = "Error, inversión no válida."
+	msgOk = "Nota valida, ok."
+	msgInputT= "Favor, indique la nota de la tarea"
+	msgInputE= "Favor, indique la nota del examen"
+	msgOutput = "Nota difinitva de"
+	
+	matematicasTareasUno=float(input(msgInputT +" de matematicas 1: "))
+	if 0< matematicasTareasUno <= 5 :
+	  print(msgOk)
+	  matematicasTareasDos=float(input(msgInputT +" de matematicas 2: "))
+	  if 0< matematicasTareasDos <= 5 :
+	    print(msgOk)
+	    matematicasTareasTres=float(input(msgInputT +" de matematicas 3: "))
+	    if 0< matematicasTareasTres <= 5 :
+	      print(msgOk)
+	      fisicaTareasUno=float(input(msgInputT +" de fisica 1: "))
+	      if 0< fisicaTareasUno <= 5 :
+	        print(msgOk)
+	        fisicaTareasDos=float(input(msgInputT +" de fisica 2: "))
+	        if 0<fisicaTareasDos<=5 :
+	          print(msgOk)
+	          quimicaTareasUno=float(input(msgInputT +" de quimica 1: "))
+	          if 0< quimicaTareasUno <= 5:
+	            print(msgOk)
+	            quimicaTareasDos= float(input(msgInputT +" de quimica 2: "))
+	            if 0< quimicaTareasDos <=5 : 
+	              print(msgOk)
+	              quimicaTareasTres=float(input(msgInputT +" de fisica 1: "))
+	              if 0< quimicaTareasTres <=5 :
+	                print(msgOk)
+	                matematicasNotaExamen=float(input(msgInputE +" de matemateticas: "))
+	                if 0< matematicasNotaExamen <=5 :
+	                  print(msgOk)
+	                  fisicaNotaExamen=float(input(msgInputE +" de fisica: "))
+	                  if 0< fisicaNotaExamen <=5 :
+	                    print(msgOk)
+	                    quimicaNotaExamen=float(input(msgInputE +" de quimica: "))
+	                    if 0< quimicaNotaExamen <= 5 :
+	                      print(msgOk)
+	
+	                      matematicasTareas= ((matematicasTareasUno + matematicasTareasDos + matematicasTareasTres)/3) * matematicasPorTareas
+	                      matematicasExamen= matematicasNotaExamen * matematicasPorExamen
+	                      matematicasPro= matematicasExamen + matematicasTareas
+	
+	                      print(msgOutput , "matematicas: " ,matematicasPro)
+	
+	                      fisicaTareas= ((fisicaTareasUno + fisicaTareasDos)/2)* fisicaPorTareas
+	                      fisicaExamen= fisicaNotaExamen * fisicaPorExamen
+	                      fisicaPro= fisicaExamen + fisicaTareas
+	
+	                      print(msgOutput, "fisica: " ,fisicaPro) 
+	
+	                      quimicaTareas= ((quimicaTareasUno + quimicaTareasDos + quimicaTareasTres)/3) * quimicaPorTareas
+	                      quimicaExamen= quimicaExamenNota * quimicaPorExamen
+	                      quimicaPro= matematicasExamen + matematicasTareas
+	
+	                      print(msgOutput, "quimica: ",quimicaPro)
+	                    else :
+	                      print(msgError)
+	                  else :
+	                    print(msgError)
+	                else : 
+	                  print(msgError)
+	              else :
+	                print(msgError)
+	            else :
+	              print(msgError)
+	          else :
+	            print(msgError)
+	        else :
+	          print(msgError)
+	      else :
+	        print(msgError)
+	    else :
+	      print(msgError)  
+	  else :
+	    print(msgError) 
+	else :
+	  print(msgError)
+	  
 ```
 3. Leer un real e imprimir si el número es positivo o negativo.
    
