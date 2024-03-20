@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contar con FOR</title>
+</head>
+<body>
+    <script>
+        var n1;
+        var par;
+        var impar;
+
+        par=0;
+        impar=0;
+
+        for(n1=1;n1<=5;n1++){
+            if(n1 %2==0){
+                console.log(n1+" es par\n")
+                par++
+            }
+            else{
+                console.log(n1+" es impar\n")
+                impar++
+            }
+        }
+        console.log("hay "+par+" pares\n")
+        console.log("hay "+impar+" impares")
+    </script>
+</body>
+</html>
