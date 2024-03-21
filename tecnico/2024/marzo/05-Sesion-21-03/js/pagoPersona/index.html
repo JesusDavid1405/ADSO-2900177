@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago de una persona</title>
+</head>
+<body>
+    <script>
+        console.log("Recibo de pago")
+
+        var sueldo;
+        var valorDia;
+        var diaTrabajdos
+        
+        var impuesto;
+        var transporte; 
+        var minimo; 
+
+        var descuento; 
+        var salud;
+        var pension;
+        var arl;
+
+        var totalPagar;
+
+        valorDia= 100000;
+        diaTrabajdos= 30;
+
+        sueldo= valorDia * diaTrabajdos;
+
+        salud= sueldo * 0.12;
+        pension= sueldo * 0.16;
+        arl= sueldo * 0.052;
+        descuento= salud + pension + arl;
+
+        minimo= 1300000
+
+        if (sueldo< minimo*2){
+            transporte= 114000;
+            totalPagar= (sueldo-descuento)+transporte;
+        }
+        else{
+            transporte= 0 ;
+        }
+
+        if(sueldo> minimo*4){
+            impuesto= sueldo * 0.04;
+            totalPagar=(sueldo-descuento)-impuesto;
+        }
+        else{
+            impuesto= 0
+            totalPagar= sueldo-descuento
+        }
+        console.log("sueldo: "+sueldo+"\n"+"descuento: "+descuento+"\n"+"trasporte: "+transporte+"\n"+"impuesto: "+impuesto+"\n"+"total a pagar: "+totalPagar)
+
+
+    </script>
+</body>
+</html>
