@@ -1,0 +1,19 @@
+
+.tabla{
+    height: 200px;
+    margin: 0px 5px 20px 20px;
+    border-radius: 10%;
+    border: 1px solid black;
+}
+.suma{
+     background-color: red ;
+}
+.resta{
+     background-color: blue;
+}
+.multiplicacion{
+     background-color: yellow;
+}
+.division{
+     background-color: green;
+}
