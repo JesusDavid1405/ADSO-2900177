@@ -20,4 +20,4 @@ Creamos este programa como modo de enseñanza para los niños, adquiriendo el co
 ### vision
 > al plazo de 4 años tener funionando nuestro sistema en la mayor cantidad de colegios y escuelas del pais y con esto mejorar tener un impacto para bien a la juventud a la vez que mejorar el aprendizaje de los niños.
 ### codigo del programa
-![codigo pseint](entradaDiscotecaDg.png)
+![codigo pseint](.png)
