@@ -25,7 +25,7 @@ También puedes presionar el método abreviado de teclado `Comando+E (Mac)` o `C
 > hola `mundo`*(``)*
 ### insertar imagenes
 
-![gato azul](c/xampp/htdocs/ADSO-2900177/gumballGit.png)
+![gato azul](gumballGit.png)
 
 Puede mostrar una imagen ***agregando !*** y ajustar el ***texto alternativo en [ ]***.
 El texto alternativo es un texto corto equivalente a la información de la imagen. Luego, escribe el vínculo de la imagen entre ***paréntesis ()***.
