@@ -1,25 +1,30 @@
 <?php
-class operaciones{
-    private $numeroUno;
-    private $numeroDos;
 
-    public setNumeroUno($numeroUno);
-    public getNumeroUno();
-    public setNumeroDos($numeroDos);
-    public getNumeroDos();
+include('libreria/operaciones.php');
 
-}
-class controlOperaciones extends operaciones{
-    private $numeroUno;
-    private $numeroDos;
-    private $suma;
-    private $resta;
-    private $multiplicacion;
-    private $division;
+$numeroUno= new operaciones();
+$numeroUno->setNumeroUno(7);
 
-    public suma($numeroUno,$numeroDos){
-        $this->suma=$numeroUno+$numeroDos;
-        return $this->suma;
-    }
-}
-echo controlOperaciones.suma()
+$numeroDos= new operaciones();
+$numeroDos->setNumeroDos(7);
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operaciones</title>
+</head>
+<body>
+    <?php
+    
+        $sumar= new control();
+        $sumar->suma($numeroUno->getNumeroUno(), $numeroDos->getNumeroDos());
+        
+        echo "<h2>". $sumar ."</h2>";
+    ?>
+</body>
+</html>
