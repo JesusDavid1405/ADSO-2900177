@@ -1,13 +1,18 @@
 <?php
 
 include('libreria/operaciones.php');
+include('libreria/control.php');
 
 $numeroUno= new operaciones();
-$numeroUno->setNumeroUno(7);
+$numeroUno->setNumeroUno(9);
 
 $numeroDos= new operaciones();
-$numeroDos->setNumeroDos(7);
+$numeroDos->setNumeroDos(9);
 
+$sumar= new control();
+$sumar->suma(
+    
+)
 
 ?>
 
@@ -20,11 +25,8 @@ $numeroDos->setNumeroDos(7);
 </head>
 <body>
     <?php
-    
-        $sumar= new control();
-        $sumar->suma($numeroUno->getNumeroUno(), $numeroDos->getNumeroDos());
+    echo $sumar->suma();
         
-        echo "<h2>". $sumar ."</h2>";
     ?>
 </body>
 </html>
