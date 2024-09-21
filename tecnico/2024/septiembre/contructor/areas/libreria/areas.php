@@ -34,5 +34,23 @@ class triangulo
     }
 
 }
+class Rectangulo
+{
+    private $base;
+    private $altura;
+    private $areaRectangulo;
+    
+    public function __construct(Medidas $base, Medidas $altura)
+    {
+        $this->base=$base->getValorMedidas();
+        $this->altura=$altura->getValorMedidas();
+    }
+    public function rectangulo(){
+
+        $this->areaRectangulo= $this->base * $this->altura;
+        return $this->areaRectangulo;
+    }
+
+}
 
 ?>

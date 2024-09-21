@@ -19,14 +19,19 @@ include 'libreria/medidas.php';
 
         $baseTriangulo= new Medidas(8);
         $alturaTriangulo= new Medidas(5);
+
+        $baseRectangulo= new Medidas(8);
+        $alturaRectangulo= new Medidas(5);
         
         $cuadrado= new cuadrado($ladoCuadrado);
         $triangulo= new triangulo($baseTriangulo,$alturaTriangulo);
+        $rectangulo= new rectangulo($baseRectangulo,$alturaRectangulo);
         
 
         echo 
             "<h2>areas cuadrado <br>".$cuadrado->cuadrado()."</h2><span> lado: {$ladoCuadrado->getValorMedidas()} </span> <br>".
-            "<h2>areas triangulo <br>".$triangulo->triangulo()."</h2> <span> base: {$baseTriangulo->getValorMedidas()}<br>altura: {$alturaTriangulo->getValorMedidas()} </span> <br>"
+            "<h2>areas triangulo <br>".$triangulo->triangulo()."</h2> <span> base: {$baseTriangulo->getValorMedidas()}<br>altura: {$alturaTriangulo->getValorMedidas()} </span> <br>".
+            "<h2>areas rectangulo <br>".$rectangulo->rectangulo()."</h2> <span> base: {$baseRectangulo->getValorMedidas()}<br>altura: {$alturaRectangulo->getValorMedidas()} </span> <br>"
         ;
 
     ?>
