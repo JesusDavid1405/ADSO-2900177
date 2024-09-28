@@ -15,11 +15,11 @@ function realizarTodasOperaciones(){
         if(data.error){
             alert(data.error);
         }else{
-            document.getElementById('resultado').textContent=`suma: ${data.suma}`;
-            document.getElementById('resultado').textContent=`resta: ${data.resta}`;
-            document.getElementById('resultado').textContent=`multiplicacion: ${data.multiplicacion}`;
-            document.getElementById('resultado').textContent=`division: ${data.division}`;
+            document.getElementById('resultadoSuma').textContent=`suma: ${data.suma}`;
+            document.getElementById('resultadoResta').textContent=`resta: ${data.resta}`;
+            document.getElementById('resultadoMultiplicacion').textContent=`multiplicacion: ${data.multiplicacion}`;
         }
     })
     .catch(error => console.error('Error:',error));
 }
+realizarTodasOperaciones()
